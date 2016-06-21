@@ -7,7 +7,7 @@
   <title>@Pay Demo</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -110,6 +110,49 @@
       display: none;
       max-width:400px;
       }
+
+
+
+      @media only screen
+        and (min-device-width: 375px)
+        and (max-device-width: 667px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+
+          .shirt, .product{
+            float: none;
+          }
+          .product{
+            display: block;
+            margin: 20px auto;
+            width: 70%;
+          }
+
+          h2{
+            font-size: 18px;
+          }
+
+          .logo{
+            float: none;
+            display: block;
+            margin: 0 auto !Important;
+            text-align: center;
+          }
+
+          .shirt{
+            width: 80%;
+            display: block;
+            margin: 0px auto;
+          }
+
+          #demo{
+            width: 100%
+          }
+
+          .menu{display: none;}
+
+      }
+
+
 
 
   </style>

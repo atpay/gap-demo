@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, Sans-Serif;
+    }
+
+    #demo{
+      display: block;
+      width: 800px;
+      margin: 40px auto;
+    }
+
+    .shirt{
+      width: 400px;
+    }
+
+    .product{
+      float:right;
+      border: 2px solid #b9b9b9;
+      width:300px;
+      padding:20px;
+    }
+
+    #header{
+      width: 100%;
+      padding: 20px 0;
+      background-color: #000a43;
+      color: #fff;
+      text-align: center;
+    }
+
+    .menu {
+      line-height: 70px;
+      font-weight: bold;
+      color:#000a43;
+      margin-left: 100px;
+    }
+
+    #sub_header{
+      width: 70%;
+      margin: 30px auto;
+    }
+
+    .logo{
+      float:left;
+      height: 70px;
+    }
+
+    .add_to_bag, .two_click{
+      display: block;
+      width:88%;
+      text-align: center;
+      color: #ffffff;
+      text-decoration: none;
+      margin: 20px 0;
+    }
+
+    .add_to_bag{
+      padding:17px;
+      background-color: #000a43;
+    }
+
+    .two_click{
+      padding: 5px 15px 8px;
+      background-color: #8cc953;
+    }
+
+    .two_click_wrap{
+      display:none;
+    }
+
+    .tag{
+      display: block;
+      font-size: .8em;
+      line-height: 20px;
+      color: #426125;
+    }
+
+    .clear{
+      clear:both;
+    }
+
+    label{
+      float:left;
+      font-weight: bold;
+    }
+
+    input, select{
+      float:right;
+      margin: 7px 0;
+    }
+
+    .options{
+      width: 70%;
+    }
+
+    .lightbox {
+      display: none;
+      max-width:400px;
+      }
+
+
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="http://localhost:3000/api/v4/js/atpay.js"></script>
+
+
+</head>
+
+<body>
+
+  <div id="header">
+    The Gap 2-click Demo
+  </div>
+
+  <div id="sub_header">
+    <img src="logo.jpg" class="logo" />
+    <p class="menu">Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
+    <div class="clear"> </div>
+  </div>
+
+<div id="demo">
+<img src="shirt.jpg" class="shirt">
+
+  <div class="product">
+    <h2>Arch Logo Graphic T-shirt</h2>
+    <hr />
+    <h3>$24.95</h3>
+    <form name="shirt_form" id="shirt_form" class="submittable">
+
+      <div class="options">
+      <label for="qty"> Quantity: </label>
+      <input type="text" size="10" value="1" name="qty" id="qty" class="submittable">
+      <div class="clear"> </div>
+      <label for="size"> Size: </label>
+      <select name="size" id="size">
+        <option value="">Size:</option>
+        <option value="some_sku_small">Small</option>
+        <option value="some_sku_med">Medium </option>
+        <option value="some_sku_large">Large</option>
+        <option value="some_sku_xl">X-Large</option>
+        <option value="some_sku_xll">XX-Large</option>
+      </select>
+      </div>
+      <div class="clear"> </div>
+
+      <input type="hidden" value="24.95" name="amount" id="amount" >
+      <a href="#" class="add_to_bag">Add To Bag</a>
+      <div class="two_click_wrap">
+        <a href="#" class="two_click">
+          <span class="tag">Buy in 2 clicks</span>
+          $<span class="amount"></span>
+        </a>
+        <a href="#" data-featherlight="#whats_this">What is this?</a>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+  <div id="whats_this" class="lightbox">
+
+    <p><strong> How Does It Work?</strong><br/>
+    Click on the 2-click button and your email app will pop up with a special email. Just hit "send" to confirm your purchase, and you're done! You will receive a receipt in your inbox.</p>
+
+    <p><strong> What if it's my first time using 2-click purchase?</strong><br/>
+    No problem! You will be prompted to fill in your first and last name, primary email address, and billing information. You will only have to enter this information once. In the future, you can purchase in just two clicks.</p>
+
+    <p><strong> How secure is it?</strong><br/>
+    Very! @Pay protects your personal information by utilizing methods above and beyond industry standards. All credit card information is handled under strict PCI compliance, and your full payment information is stored in an independent secure 3rd party vault, not on our servers.</p>
+  </div>
+
+
+  <div id="thanks" class="lightbox">
+    <p>
+      <strong>Thanks!</strong><br /><br />
+      If you have not yet, please submit the payment email to complete your purchase. Your order will be shipped to address associated with your email address.
+      <br/ >
+      If you have not yet purchesed by 2-click please press checkout to complete your order. You can register for 2-click purchases by opting in during the payment process.
+    </p>
+  </div>
+
+
+<script type="text/javascript">
+  $(function( ){
+        atpay.config( {
+          organization_sid:    "org_eBBf3y7lvrYV0sjAa9ODTw"
+        } );
+  });
+
+
+$(".submittable").change(function(){
+  if($("#size").val() && $("#qty").val() ){
+    params = {
+      amount : $("#qty").val() * $("#amount").val() ,
+      name : $("#size").val(),
+      ref_id: 'atpay-sales-demo',
+      details: 'Arch Logo Graphic T-shirt'
+    }
+    atpay.offer(params, function(response){
+      $(".two_click span.amount").text(response.offer.amount.toFixed(2))
+      $(".two_click").attr('href', response.offer.button.mail_to)
+      $(".two_click_wrap").show();
+    })
+  };
+});
+
+$(".two_click").click(function(){
+    markup = $("#thanks")
+    $.featherlight(markup);
+});
+
+</script>
+
+
+</body>
+</html>

@@ -282,7 +282,9 @@ $(".submittable").change(function(){
       $(".two_click span.amount").text(response.offer.amount.toFixed(2))
       $(".two_click").attr('href', response.offer.button.mail_to)
       $(".two_click_wrap").show();
-      $('html, body').animate({scrollBottom:0}, 'slow');
+      var WH = $(window).height();
+      var SH = $('body').prop("scrollHeight");
+      $('html, body').stop().animate({scrollTop: SH-WH}, 1000);
     })
   };
 });

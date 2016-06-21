@@ -214,11 +214,11 @@
       <label for="size"> Size: </label>
       <select name="size" id="size">
         <option value="">Size:</option>
-        <option value="some_sku_small">Small</option>
-        <option value="some_sku_med">Medium </option>
-        <option value="some_sku_large">Large</option>
-        <option value="some_sku_xl">X-Large</option>
-        <option value="some_sku_xll">XX-Large</option>
+        <option value="gap_sku_small">Small</option>
+        <option value="gap_sku_med">Medium </option>
+        <option value="gap_sku_large">Large</option>
+        <option value="gap_sku_xl">X-Large</option>
+        <option value="gap_sku_xll">XX-Large</option>
       </select>
       </div>
       <div class="clear"> </div>
@@ -276,7 +276,7 @@ $(".submittable").change(function(){
       amount : $("#qty").val() * $("#amount").val() ,
       name : $("#size").val(),
       ref_id: 'atpay-sales-demo',
-      details: 'Arch Logo Graphic T-shirt'
+      item_details: 'Arch Logo Graphic T-shirt'
     }
     atpay.offer(params, function(response){
       $(".two_click span.amount").text(response.offer.amount.toFixed(2))

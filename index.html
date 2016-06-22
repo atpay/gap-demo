@@ -291,8 +291,10 @@ $(".submittable").change(function(){
 });
 
 $(".two_click").click(function(){
+  setTimeout(function () {
     markup = $("#thanks")
     $.featherlight(markup);
+  }, 5000);
 });
 
 </script>

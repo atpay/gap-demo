@@ -113,11 +113,7 @@
 
 
 
-      @media only screen
-        and (min-device-width: 375px)
-        and (max-device-width: 667px)
-        and (-webkit-min-device-pixel-ratio: 2) {
-
+      @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px), screen and (max-width: 480px) {
           .shirt, .product{
             float: none;
           }
@@ -151,6 +147,7 @@
           .menu{display: none;}
 
       }
+
 
       @media screen and (-webkit-min-device-pixel-ratio:0) {
         select,

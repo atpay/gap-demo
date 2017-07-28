@@ -73,8 +73,14 @@
     }
 
     .two_click{
-      padding: 5px 15px 8px;
-      background-color: #8cc953;
+      padding: 10px 15px 8px;
+      background-color: #80c35a;
+      border-radius: 8px;
+      font-size: 2em;
+      font-family: Lato;
+      font-weight: normal;
+      border-bottom: 4px solid #629c46;
+      letter-spacing: 2px;
     }
 
     .two_click_wrap{
@@ -83,7 +89,7 @@
 
     .tag{
       display: block;
-      font-size: .8em;
+      font-size: 12px;
       line-height: 20px;
       color: #426125;
     }
@@ -174,10 +180,10 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+  <link href="https://cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="https://dashboard.atpay.com/api/v4/js/atpay.js"></script>
 
 
@@ -224,8 +230,10 @@
       <a href="#" class="add_to_bag">Add To Bag</a>
       <div class="two_click_wrap">
         <a href="#" class="two_click">
-          <span class="tag">Buy in 2 clicks</span>
-          $<span class="amount"></span>
+          <!-- <span class="tag">Buy in 2 clicks</span>
+          $<span class="amount"></span> -->
+          Instant Buy
+          <span class='tag'> Total: $<span class='amount'></span></span>
         </a>
         <a href="#" data-featherlight="#whats_this">What is this?</a>
       </div>
